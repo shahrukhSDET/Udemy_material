@@ -15,6 +15,10 @@ print(display)
 
 while not end_of_game:
     guess = input("Guess a letter ").lower()
+
+    if guess in display:
+        print(f'You have already guessed the letter {guess}')
+
     for position in range(len(chosen_word)):
         letter = chosen_word[position]
         if letter == guess:
